@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /about/
 title: "About"
 kicker: "Elizabeth Pratt, PhD"
 standfirst: "I fell in love with IBM's design thinking approach in 2015, when I wasn't even an IBMer. Five years later I was running research for twenty of their software offerings. That is roughly how my whole career has gone: get curious about something, get close to it, then take responsibility for it."
