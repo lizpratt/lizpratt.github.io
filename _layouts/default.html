@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="masthead__name plain" href="{{ '/' | relative_url }}">Elizabeth Pratt<span class="pd">PhD</span></a>
+      <nav class="masthead__nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}#work"{% if page.url == "/" %} aria-current="page"{% endif %}>Work</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.url contains "/about" %} aria-current="page"{% endif %}>About</a>
+        <a href="mailto:{{ site.email }}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>Elizabeth Pratt, PhD &nbsp;·&nbsp; Austin, Texas</div>
+      <div class="footer__links">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="{{ site.linkedin }}">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

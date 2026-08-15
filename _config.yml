@@ -1,0 +1,35 @@
+title: "Elizabeth Pratt"
+tagline: "Research leadership for enterprise AI"
+description: >-
+  Elizabeth Pratt, PhD. Twenty years of research leadership across hardware,
+  software, and the ecosystems that join them. Selected work from IBM, Express
+  Scripts, Dell, and PayPal.
+author: "Elizabeth Pratt, PhD"
+email: "liz@prattfall.com"
+linkedin: "https://www.linkedin.com/in/lizpratt"
+url: "https://lizpratt.github.io"
+baseurl: ""
+lang: en
+
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "work"
+    values:
+      layout: "case"
+
+sass:
+  style: compressed
+
+exclude:
+  - DESIGN.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

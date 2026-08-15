@@ -1,0 +1,23 @@
+{%- comment -%}
+  Before/after pair. Params: num, caption, source, a_src, a_label, b_src, b_label
+{%- endcomment -%}
+<figure class="fig reveal">
+  <div class="pair">
+    <div class="pair__item">
+      <div class="pair__label">{{ include.a_label }}</div>
+      <div class="fig__frame">
+        <img src="{{ include.a_src | relative_url }}" alt="{{ include.a_label }}: {{ include.caption | strip_html }}" decoding="async">
+      </div>
+    </div>
+    <div class="pair__item">
+      <div class="pair__label is-after">{{ include.b_label }}</div>
+      <div class="fig__frame">
+        <img src="{{ include.b_src | relative_url }}" alt="{{ include.b_label }}: {{ include.caption | strip_html }}" decoding="async">
+      </div>
+    </div>
+  </div>
+  <figcaption>
+    <span class="fig__num">Fig. {{ include.num }}</span>{{ include.caption }}
+    {%- if include.source %}<span class="fig__src">{{ include.source }}</span>{% endif -%}
+  </figcaption>
+</figure>

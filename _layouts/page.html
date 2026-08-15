@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="shell case__header">
+  {% if page.kicker %}<p class="eyebrow">{{ page.kicker }}</p>{% endif %}
+  <h1 class="case__title">{{ page.title }}</h1>
+  {% if page.standfirst %}<p class="case__standfirst">{{ page.standfirst }}</p>{% endif %}
+</div>
+
+<div class="shell">
+  {{ content }}
+</div>

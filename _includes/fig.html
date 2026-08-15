@@ -1,0 +1,12 @@
+{%- comment -%}
+  Figure. Params: src, num, caption, source (optional), bare (optional "true"), alt
+{%- endcomment -%}
+<figure class="fig reveal{% if include.bare %} fig--bare{% endif %}">
+  <div class="fig__frame">
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | strip_html }}" decoding="async">
+  </div>
+  <figcaption>
+    <span class="fig__num">Fig. {{ include.num }}</span>{{ include.caption }}
+    {%- if include.source %}<span class="fig__src">{{ include.source }}</span>{% endif -%}
+  </figcaption>
+</figure>
