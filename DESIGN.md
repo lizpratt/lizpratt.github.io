@@ -51,7 +51,7 @@ paper       #FAF7F2   warm off-white canvas
 paper-deep  #F1ECE2   inset panels, figure mats
 ink         #17150F   body text
 ink-2       #514B40   secondary prose
-ink-3       #857D6E   captions, metadata
+ink-3       #6E6858   captions, metadata (WCAG AA, 5.2:1 on paper)
 rule        #DED6C7   hairlines
 spot        #B8431F   vermillion; the only color in the system
 spot-deep   #8E3116   spot on hover
@@ -78,9 +78,9 @@ it is being overused.
 A 12-column grid on a 1240px max width with 3.5rem gutters. Three habitual placements:
 
 - **Measure.** Prose sits in columns 3 through 9. Left-aligned, never centered.
-- **Margin.** Section numbers, figure numbers, and sidenotes sit in columns 1 through 2, aligned
-  to the first line of the paragraph they annotate. They collapse above the content on narrow
-  screens.
+- **Margin.** Section numbers and chapter numbers stack directly above the heading they label, in
+  the same column — never beside it. A number sitting in its own column next to a heading is a
+  templated pattern we deliberately avoid.
 - **Full.** Figures may break out to the full 12 columns when the diagram earns it.
 
 Vertical rhythm is a 8px base. Section breaks are 8rem on desktop, 4.5rem on mobile.
@@ -104,4 +104,6 @@ parallax effects, no scroll-jacking, no counters that tick up.
 
 Hero gradients. Glassmorphism. Rounded cards in a three-up grid. Emoji as iconography. Centered
 sans-serif headlines over a photo. Animated statistic counters. "Let's build something amazing
-together." Purple-to-blue anything.
+together." Purple-to-blue anything. Italic headings — headers are always roman; emphasis inside a
+heading or a display-scale statement is carried by weight or the spot color, never `font-style:
+italic`. Italic is reserved for emphasis inside running body prose.
